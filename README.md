@@ -1,0 +1,46 @@
+# 🏢 Corporate AI Assistant en OCI
+
+## 📝 Descripción del Proyecto
+Agente de Inteligencia Artificial corporativo desarrollado para centralizar la base de conocimiento de una organización. Este sistema permite a los colaboradores consultar políticas de RRHH, reportes financieros, manuales operativos y estructuras de datos internos interactuando en lenguaje natural.
+
+El proyecto es la solución oficial al desafío **"ONE AI for TECH" de Oracle y Alura Latam**, destacando la capacidad de procesar datos multimodales y orquestar flujos de trabajo inteligentes mediante grafos.
+
+## 🎯 Características Principales (Requisitos del Desafío)
+- **Ingesta Multimodal:** Capacidad de lectura y procesamiento de múltiples formatos de archivo corporativos, incluyendo: `PDF`, `Word`, `Excel`, `Markdown`, `CSV`, `JSON` y `HTML`.
+- **RAG Avanzado:** Arquitectura de *Retrieval-Augmented Generation* para garantizar respuestas precisas basadas estrictamente en la documentación interna.
+- **Orquestación Multi-Agente:** Implementación de enrutadores inteligentes utilizando **LangGraph** para dirigir las consultas al procesador de documentos adecuado.
+- **Despliegue en la Nube:** Alojado y ejecutado en una instancia de **Oracle Cloud Infrastructure (OCI)**.
+
+## 🛠️ Arquitectura y Tecnologías (Stack)
+* **LLM Core:** Gemini API (Google).
+* **Framework de IA:** LangChain & LangGraph.
+* **Procesamiento de Datos:** Pandas, PyPDF, Python-docx, BeautifulSoup.
+* **Vector Store:** ChromaDB.
+* **Frontend:** Streamlit (Interfaz conversacional ágil).
+* **Infraestructura:** OCI Compute Instance.
+
+## 📂 Estructura del Directorio
+\`\`\`text
+├── data/
+│   ├── raw/                 # Documentos crudos (PDFs, Excels, Word)
+│   └── processed/           # Textos limpios y vectorizados
+├── src/
+│   ├── ingestion/           # Scripts de carga multimodal (Loaders)
+│   ├── agents/              # Nodos de LangGraph y lógica de RAG
+│   └── graph/               # Definición del flujo del grafo (Workflow)
+├── app.py                   # Frontend en Streamlit y punto de entrada
+├── requirements.txt
+└── README.md
+\`\`\`
+
+## 🚀 Despliegue en Oracle Cloud (Demostración)
+*(Nota: Aquí se insertará la imagen o GIF del agente corriendo en la IP pública de OCI una vez completada la fase final del desafío).*
+
+![Demo Placeholder](https://via.placeholder.com/800x400.png?text=Agente+Ejecutándose+en+Oracle+Cloud)
+
+## ⚙️ Instrucciones de Uso Local
+1. Clonar este repositorio.
+2. Crear un entorno virtual e instalar dependencias: `pip install -r requirements.txt`
+3. Colocar los documentos de prueba en `data/raw/`.
+4. Configurar el archivo `.env` con las credenciales de Gemini y OCI.
+5. Ejecutar la interfaz: `streamlit run app.py`
