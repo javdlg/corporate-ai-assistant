@@ -1,0 +1,43 @@
+# ==========================================
+# Entornos Virtuales y Python
+# ==========================================
+__pycache__/
+*.py[cod]
+*$py.class
+venv/
+.venv/
+env/
+.env
+
+# ==========================================
+# Credenciales y Seguridad (OCI / APIs)
+# ==========================================
+*.pem
+*.key
+.oci/
+config
+oci_api_key.pem
+
+# ==========================================
+# Documentos Locales (Base de Conocimiento)
+# ==========================================
+# Ignorar los documentos pero mantener las carpetas
+data/raw/*
+data/processed/*
+!data/raw/.gitkeep
+!data/processed/.gitkeep
+
+# ==========================================
+# Base de Datos Vectorial (ChromaDB)
+# ==========================================
+chroma_db/
+vector_store/
+*.sqlite3
+
+# ==========================================
+# IDEs y Herramientas
+# ==========================================
+.idea/
+.vscode/
+*.swp
+.DS_Store

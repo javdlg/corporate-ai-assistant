@@ -1,0 +1,29 @@
+# ==========================================
+# Corporate AI Assistant - Dependencies
+# ==========================================
+
+# 1. Core AI & Orchestration
+langchain==0.1.16
+langchain-core==0.1.45
+langgraph==0.0.38
+langchain-google-genai==1.0.3
+
+# 2. Document Loaders (Ingesta Multimodal)
+pypdf==4.2.0           # Para archivos PDF
+python-docx==1.1.0     # Para archivos Word (.docx)
+openpyxl==3.1.2        # Para archivos Excel (.xlsx)
+pandas==2.2.2          # Para archivos CSV y JSON
+beautifulsoup4==4.12.3 # Para procesar HTML
+markdown==3.6          # Para procesar archivos Markdown
+
+# 3. Vector Database & RAG
+chromadb==0.4.24       # Base de datos vectorial embebida
+tiktoken==0.6.0        # Tokenizador eficiente
+
+# 4. Cloud & Deployment (OCI + Frontend)
+oci==2.125.0           # SDK de Oracle Cloud Infrastructure
+streamlit==1.33.0      # Interfaz de usuario para el chat interactivo
+
+# 5. Environment & Utilities
+python-dotenv==1.0.1
+pydantic==2.7.0
