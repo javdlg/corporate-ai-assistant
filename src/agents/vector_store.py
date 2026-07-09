@@ -1,5 +1,6 @@
 import os
 from dotenv import load_dotenv
+from langchain_google_genai import GoogleGenerativeAIEmbeddings
 
 # Cargar variables de entorno (.env)
 SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
@@ -9,11 +10,9 @@ load_dotenv(ENV_PATH)
 
 # Imports con compatibilidad hacia atrás y adelante para LangChain / Chroma
 try:
-    from langchain_chroma import Chroma
+    from langchain_chroma import Chroma  # type: ignore
 except ImportError:
-    from langchain_community.vectorstores import Chroma
-
-from langchain_google_genai import GoogleGenerativeAIEmbeddings
+    from langchain_community.vectorstores import Chroma  # type: ignore
 
 # Ruta persistente para la base vectorial ChromaDB
 CHROMA_PATH = os.path.join(BASE_DIR, "chroma_db")
@@ -34,8 +33,7 @@ def get_embedding_function():
 
     # Inicializamos el modelo oficial de embeddings de Gemini (text-embedding-004)
     embeddings = GoogleGenerativeAIEmbeddings(
-        model="models/text-embedding-004",
-        google_api_key=api_key
+        model="models/text-embedding-004", google_api_key=api_key
     )
     return embeddings
 
@@ -45,11 +43,11 @@ def get_vector_store():
     Obtiene o inicializa la instancia de ChromaDB persistente en el directorio chroma_db.
     """
     embeddings = get_embedding_function()
-    
+
     vector_store = Chroma(
         persist_directory=CHROMA_PATH,
         embedding_function=embeddings,
-        collection_name="corporate_knowledge_base"
+        collection_name="corporate_knowledge_base",
     )
     return vector_store
 
@@ -63,7 +61,9 @@ def build_vector_store(chunks):
         print("⚠️ No hay fragmentos para indexar.")
         return None
 
-    print(f"📦 Indexando {len(chunks)} fragmentos en ChromaDB (directorio: {CHROMA_PATH})...")
+    print(
+        f"📦 Indexando {len(chunks)} fragmentos en ChromaDB (directorio: {CHROMA_PATH})..."
+    )
 
     embeddings = get_embedding_function()
 
@@ -72,10 +72,10 @@ def build_vector_store(chunks):
         documents=chunks,
         embedding=embeddings,
         persist_directory=CHROMA_PATH,
-        collection_name="corporate_knowledge_base"
+        collection_name="corporate_knowledge_base",
     )
 
-    print(f"✅ Indexación completada exitosamente en ChromaDB.")
+    print("✅ Indexación completada exitosamente en ChromaDB.")
     return vector_store
 
 
@@ -83,6 +83,8 @@ if __name__ == "__main__":
     print("🧪 Probando inicialización de Gemini Embeddings y ChromaDB...")
     try:
         store = get_vector_store()
-        print("✅ Conexión e inicialización de ChromaDB con Gemini Embeddings correcta.")
+        print(
+            "✅ Conexión e inicialización de ChromaDB con Gemini Embeddings correcta."
+        )
     except Exception as e:
         print(f"⚠️ Nota de configuración: {e}")

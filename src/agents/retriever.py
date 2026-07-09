@@ -14,7 +14,7 @@ if SCRIPT_DIR not in sys.path:
 ENV_PATH = os.path.join(PROJECT_DIR, ".env")
 load_dotenv(ENV_PATH)
 
-from vector_store import get_vector_store
+from vector_store import get_vector_store  # noqa: E402
 
 
 def retrieve_relevant_documents(query: str, k: int = 4):
@@ -48,9 +48,9 @@ def test_retriever():
     ]
     
     for i, query in enumerate(test_queries, 1):
-        print(f"\n──────────────────────────────────────────────────")
+        print("\n──────────────────────────────────────────────────")
         print(f"Pregunta {i}: '{query}'")
-        print(f"──────────────────────────────────────────────────")
+        print("──────────────────────────────────────────────────")
         
         results = retrieve_relevant_documents(query, k=2)
         

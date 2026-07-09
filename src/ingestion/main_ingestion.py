@@ -11,7 +11,7 @@ AGENTS_DIR = os.path.join(SRC_DIR, "agents")
 if AGENTS_DIR not in sys.path:
     sys.path.append(AGENTS_DIR)
 
-from vector_store import build_vector_store
+from vector_store import build_vector_store  # noqa: E402
 
 
 def run_pipeline():
