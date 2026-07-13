@@ -21,8 +21,7 @@ markdown>=3.6          # Para procesar archivos Markdown
 chromadb>=0.4.24       # Base de datos vectorial embebida
 tiktoken>=0.6.0        # Tokenizador eficiente
 
-# 4. Cloud & Deployment (OCI + Frontend)
-oci>=2.125.0           # SDK de Oracle Cloud Infrastructure
+# 4. Cloud & Deployment (Streamlit)
 streamlit>=1.33.0      # Interfaz de usuario para el chat interactivo
 
 # 5. Environment & Utilities
