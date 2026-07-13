@@ -1,4 +1,4 @@
-# 🏢 Corporate AI Assistant en OCI
+# 🏢 Corporate AI Assistant
 
 ## 📝 Descripción del Proyecto
 Agente de Inteligencia Artificial corporativo desarrollado para centralizar la base de conocimiento de una organización. Este sistema permite a los colaboradores consultar políticas de RRHH, reportes financieros, manuales operativos y estructuras de datos internos interactuando en lenguaje natural.
@@ -9,7 +9,7 @@ El proyecto es la solución oficial al desafío **"ONE AI for TECH" de Oracle y 
 - **Ingesta Multimodal:** Capacidad de lectura y procesamiento de múltiples formatos de archivo corporativos, incluyendo: `PDF`, `Word`, `Excel`, `Markdown`, `CSV`, `JSON` y `HTML`.
 - **RAG Avanzado:** Arquitectura de *Retrieval-Augmented Generation* para garantizar respuestas precisas basadas estrictamente en la documentación interna.
 - **Orquestación Multi-Agente:** Implementación de enrutadores inteligentes utilizando **LangGraph** para dirigir las consultas al procesador de documentos adecuado.
-- **Despliegue en la Nube:** Alojado y ejecutado en una instancia de **Oracle Cloud Infrastructure (OCI)**.
+- **Despliegue en la Nube:** Alojado en **Streamlit Community Cloud** (sustituyendo a OCI por razones de cuota gratuita).
 
 ## 🛠️ Arquitectura y Tecnologías (Stack)
 * **LLM Core:** Gemini API (Google).
@@ -17,7 +17,7 @@ El proyecto es la solución oficial al desafío **"ONE AI for TECH" de Oracle y 
 * **Procesamiento de Datos:** Pandas, PyPDF, Python-docx, BeautifulSoup.
 * **Vector Store:** ChromaDB.
 * **Frontend:** Streamlit (Interfaz conversacional ágil).
-* **Infraestructura:** OCI Compute Instance.
+* **Infraestructura:** Streamlit Community Cloud.
 
 ## 📂 Estructura del Directorio
 ```text
@@ -33,14 +33,14 @@ El proyecto es la solución oficial al desafío **"ONE AI for TECH" de Oracle y 
 └── README.md
 ```
 
-## 🚀 Despliegue en Oracle Cloud (Demostración)
-*(Nota: Aquí se insertará la imagen o GIF del agente corriendo en la IP pública de OCI una vez completada la fase final del desafío).*
+## 🚀 Despliegue en la Nube (Demostración)
+*(Nota: Aquí se insertará la imagen o GIF del agente corriendo en Streamlit Community Cloud una vez completada la fase final).*
 
-![Demo Placeholder](https://via.placeholder.com/800x400.png?text=Agente+Ejecutándose+en+Oracle+Cloud)
+![Demo Placeholder](https://via.placeholder.com/800x400.png?text=Agente+Ejecutándose+en+Streamlit+Cloud)
 
 ## ⚙️ Instrucciones de Uso Local
 1. Clonar este repositorio.
 2. Crear un entorno virtual e instalar dependencias: `pip install -r requirements.txt`
 3. Colocar los documentos de prueba en `data/raw/`.
-4. Configurar el archivo `.env` con las credenciales de Gemini y OCI.
+4. Configurar el archivo `.env` con las credenciales de Gemini API.
 5. Ejecutar la interfaz: `streamlit run app.py`
