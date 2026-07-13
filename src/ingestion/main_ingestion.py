@@ -1,17 +1,7 @@
-import os
-import sys
-from document_loader import process_unstructured_documents
-from structured_loader import process_structured_documents
-from chunker import chunk_processed_documents
-
-# Añadimos el directorio src/agents al path para importar el vector store
-SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
-SRC_DIR = os.path.dirname(SCRIPT_DIR)
-AGENTS_DIR = os.path.join(SRC_DIR, "agents")
-if AGENTS_DIR not in sys.path:
-    sys.path.append(AGENTS_DIR)
-
-from vector_store import build_vector_store  # noqa: E402
+from src.ingestion.document_loader import process_unstructured_documents
+from src.ingestion.structured_loader import process_structured_documents
+from src.ingestion.chunker import chunk_processed_documents
+from src.agents.vector_store import build_vector_store
 
 
 def run_pipeline():

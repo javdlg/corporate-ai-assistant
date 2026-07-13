@@ -1,19 +1,13 @@
 import os
-import sys
 from dotenv import load_dotenv
 from langchain_google_genai import ChatGoogleGenerativeAI
 
-# 1. Configuración de rutas para importación correcta (debe correr ANTES de importar módulos locales)
-SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
-PROJECT_DIR = os.path.dirname(os.path.dirname(SCRIPT_DIR))
-
-if SCRIPT_DIR not in sys.path:
-    sys.path.append(SCRIPT_DIR)
-
-from state import AgentState  # noqa: E402
-from retriever import retrieve_relevant_documents  # noqa: E402
+from src.agents.state import AgentState
+from src.agents.retriever import retrieve_relevant_documents
 
 # Cargar variables de entorno (.env)
+SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
+PROJECT_DIR = os.path.dirname(os.path.dirname(SCRIPT_DIR))
 ENV_PATH = os.path.join(PROJECT_DIR, ".env")
 load_dotenv(ENV_PATH)
 
