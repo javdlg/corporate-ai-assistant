@@ -9,7 +9,7 @@ El proyecto es la solución oficial al desafío **"ONE AI for TECH" de Oracle y 
 - **Ingesta Multimodal:** Capacidad de lectura y procesamiento de múltiples formatos de archivo corporativos, incluyendo: `PDF`, `Word`, `Excel`, `Markdown`, `CSV`, `JSON` y `HTML`.
 - **RAG Avanzado:** Arquitectura de *Retrieval-Augmented Generation* para garantizar respuestas precisas basadas estrictamente en la documentación interna.
 - **Orquestación Multi-Agente:** Implementación de enrutadores inteligentes utilizando **LangGraph** para dirigir las consultas al procesador de documentos adecuado.
-- **Despliegue en la Nube:** Alojado en **Streamlit Community Cloud** (sustituyendo a OCI por razones de cuota gratuita).
+- **Despliegue en la Nube:** Alojado en **Streamlit Community Cloud**.
 
 ## 🛠️ Arquitectura y Tecnologías (Stack)
 * **LLM Core:** Gemini API (Google).
