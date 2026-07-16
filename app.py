@@ -19,6 +19,7 @@ st.set_page_config(
     initial_sidebar_state="expanded",
 )
 
+# Estilo estético premium
 st.markdown(
     """
     <style>
@@ -40,6 +41,14 @@ st.markdown(
             border-radius: 4px;
             margin-bottom: 8px;
             font-size: 0.9rem;
+        }
+        /* Ajuste visual para las fuentes consultadas */
+        .source-box {
+            background-color: #FAFAFA;
+            border: 1px solid #E5E7EB;
+            border-radius: 6px;
+            padding: 10px;
+            margin-bottom: 8px;
         }
     </style>
 """,
@@ -92,7 +101,7 @@ with st.sidebar:
     st.markdown("---")
     st.subheader("⚙️ Acciones")
 
-    # Botón para correr el pipeline de ingesta (Paso 3)
+    # Botón para correr el pipeline de ingesta
     if st.button(
         "🔄 Actualizar Base Vectorial", use_container_width=True, disabled=not api_key
     ):
@@ -133,10 +142,28 @@ if not st.session_state.messages:
         "👋 **¡Bienvenido al canal oficial de consultas!** Escribe una pregunta sobre vacaciones, gastos, manuales técnicos o SLAs abajo para comenzar la conversación."
     )
 
-# Renderizado de historial de chat
+# Renderizado de historial de chat con soporte de Fuentes (Paso 4)
 for msg in st.session_state.messages:
     with st.chat_message(msg["role"], avatar="👤" if msg["role"] == "user" else "🤖"):
         st.write(msg["content"])
+
+        # Desplegar fuentes si existen y el mensaje es de la IA
+        if msg["role"] == "assistant" and msg.get("documents"):
+            with st.expander("📚 Fuentes y referencias consultadas"):
+                for idx, doc in enumerate(msg["documents"], 1):
+                    source = doc.metadata.get("source", "Documento corporativo")
+                    chunk_id = doc.metadata.get("chunk_id", "?")
+                    total = doc.metadata.get("total_chunks", "?")
+
+                    st.markdown(
+                        f"""
+                    <div class="source-box">
+                        <strong>Fuente {idx}:</strong> <code>{source}</code> (Fragmento {chunk_id}/{total})
+                        <br><small style="color: #6B7280;">{doc.page_content.strip()}</small>
+                    </div>
+                    """,
+                        unsafe_allow_html=True,
+                    )
 
 # Captura de la entrada del usuario
 if question := st.chat_input("Escribe tu consulta aquí...", disabled=not api_key):
@@ -170,7 +197,7 @@ if question := st.chat_input("Escribe tu consulta aquí...", disabled=not api_ke
                 st.session_state.chat_history.append(("human", question))
                 st.session_state.chat_history.append(("ai", answer))
 
-                # Pedir rerun para actualizar la vista limpia
+                # Pedir rerun para actualizar la vista limpia y mostrar acordeones de fuentes
                 st.rerun()
             except Exception as e:
                 st.error(f"Ocurrió un error al procesar tu consulta: {e}")
