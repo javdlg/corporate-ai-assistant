@@ -53,7 +53,7 @@ def generate_answer(state: AgentState) -> dict:
 
     # Inicializamos el modelo oficial de chat de Gemini
     llm = ChatGoogleGenerativeAI(
-        model="gemini-1.5-flash",
+        model="gemini-2.5-flash",
         google_api_key=api_key,
         temperature=0.2,  # Temperatura baja para garantizar respuestas precisas basadas en el contexto
     )
@@ -90,5 +90,5 @@ def generate_answer(state: AgentState) -> dict:
     except Exception as e:
         print(f"❌ Error al invocar a Gemini API: {e}")
         return {
-            "generation": f"Lo siento, ocurrió un error interno al intentar procesar tu consulta con el modelo de IA. Detalle técnico: {e}"
+            "generation": "Lo siento, ocurrió un error interno al intentar procesar tu consulta con el modelo de IA."
         }
