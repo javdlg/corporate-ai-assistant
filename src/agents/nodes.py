@@ -90,5 +90,5 @@ def generate_answer(state: AgentState) -> dict:
     except Exception as e:
         print(f"❌ Error al invocar a Gemini API: {e}")
         return {
-            "generation": "Lo siento, ocurrió un error interno al intentar procesar tu consulta con el modelo de IA."
+            "generation": f"Lo siento, ocurrió un error interno al intentar procesar tu consulta con el modelo de IA. Detalle técnico: {e}"
         }
