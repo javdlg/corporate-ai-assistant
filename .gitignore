@@ -21,16 +21,17 @@ oci_api_key.pem
 # ==========================================
 # Documentos Locales (Base de Conocimiento)
 # ==========================================
-# Ignorar los documentos pero mantener las carpetas
-data/raw/*
-data/processed/*
+# Permitimos subir los documentos sintéticos para el despliegue automático
+# data/raw/*
+# data/processed/*
 !data/raw/.gitkeep
 !data/processed/.gitkeep
 
 # ==========================================
 # Base de Datos Vectorial (ChromaDB)
 # ==========================================
-chroma_db/
+# Permitimos subir la base vectorial precargada para que la app funcione inmediatamente
+# chroma_db/
 vector_store/
 *.sqlite3
 

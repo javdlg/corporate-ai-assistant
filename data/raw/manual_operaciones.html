@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Manual de Operaciones y Procedimientos - OmniCorp</title>
+    <style>
+        body { font-family: Arial, sans-serif; line-height: 1.6; color: #333; margin: 20px; }
+        h1 { color: #003366; border-bottom: 2px solid #003366; padding-bottom: 8px; }
+        h2 { color: #005599; margin-top: 20px; }
+        .section { background: #f4f6f9; padding: 15px; border-left: 5px solid #003366; margin-bottom: 20px; }
+        .sla-table { width: 100%; border-collapse: collapse; margin-top: 10px; }
+        .sla-table th, .sla-table td { border: 1px solid #ddd; padding: 8px; text-align: left; }
+        .sla-table th { background-color: #003366; color: white; }
+    </style>
+</head>
+<body>
+    <h1>🏢 Manual de Operaciones Estandarizadas (SOP) - OmniCorp 2026</h1>
+    
+    <div class="section">
+        <h2>1. Gestión de Inventario y Cadena de Suministro</h2>
+        <p>El objetivo principal del departamento de operaciones es garantizar la consistencia y trazabilidad de los datos en toda la cadena de suministro corporativa.</p>
+        <p><strong>Procedimiento Obligatorio:</strong> Todo ingreso de mercadería, devolución o actualización de stock debe registrarse en el sistema ERP Tango antes del cierre operativo diario (18:00 hs). Las discrepancias superiores al 2% deben ser notificadas de inmediato a la Gerencia de Operaciones.</p>
+    </div>
+
+    <div class="section">
+        <h2>2. Acuerdos de Nivel de Servicio (SLA) y Soporte Técnico</h2>
+        <p>Garantizamos un uptime operativo del 99.9% para todas las plataformas críticas del negocio. Los tiempos de respuesta a incidentes se clasifican según su severidad:</p>
+        
+        <table class="sla-table">
+            <thead>
+                <tr>
+                    <th>Nivel de Severidad</th>
+                    <th>Descripción</th>
+                    <th>Tiempo de Respuesta (SLA)</th>
+                    <th>Responsable</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Crítico (P1)</td>
+                    <td>Caída total de producción o sistemas core</td>
+                    <td>&lt; 15 minutos</td>
+                    <td>Team Lead IT / DevOps</td>
+                </tr>
+                <tr>
+                    <td>Alto (P2)</td>
+                    <td>Degradación severa del rendimiento</td>
+                    <td>&lt; 1 hora</td>
+                    <td>Soporte L2 Nivel Técnico</td>
+                </tr>
+                <tr>
+                    <td>Medio (P3)</td>
+                    <td>Fallas menores o consultas de usuarios</td>
+                    <td>&lt; 4 horas</td>
+                    <td>Helpdesk L1</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="section">
+        <h2>3. Protocolo de Respaldos y Recuperación ante Desastres (DRP)</h2>
+        <p>Los respaldos de base de datos se ejecutan automáticamente cada 6 horas en <strong>Oracle Cloud Infrastructure (OCI) Object Storage</strong> con encriptación activa. Las pruebas de restauración de copias de seguridad se llevan a cabo el primer domingo de cada mes.</p>
+    </div>
+</body>
+</html>

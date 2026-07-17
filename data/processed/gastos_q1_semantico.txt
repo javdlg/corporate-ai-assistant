@@ -1,0 +1,18 @@
+El departamento de IT registró un gasto de $2450.0 USD en la categoría 'Infraestructura Cloud' el día 2026-01-05. (ID de transacción: TRX-1001).
+El departamento de Marketing registró un gasto de $3800.5 USD en la categoría 'Campañas Digitales' el día 2026-01-12. (ID de transacción: TRX-1002).
+El departamento de RRHH registró un gasto de $1250.0 USD en la categoría 'Programa Onboarding' el día 2026-01-18. (ID de transacción: TRX-1003).
+El departamento de Ventas registró un gasto de $980.75 USD en la categoría 'Viajes Corporativos' el día 2026-01-22. (ID de transacción: TRX-1004).
+El departamento de IT registró un gasto de $3100.0 USD en la categoría 'Licencias Software SaaS' el día 2026-01-29. (ID de transacción: TRX-1005).
+El departamento de Finanzas registró un gasto de $4500.0 USD en la categoría 'Auditoría Externa' el día 2026-02-03. (ID de transacción: TRX-1006).
+El departamento de Operaciones registró un gasto de $2150.3 USD en la categoría 'Logística y Suministros' el día 2026-02-08. (ID de transacción: TRX-1007).
+El departamento de IT registró un gasto de $1890.0 USD en la categoría 'Hardware y Periféricos' el día 2026-02-14. (ID de transacción: TRX-1008).
+El departamento de RRHH registró un gasto de $1500.0 USD en la categoría 'Capacitación Técnica' el día 2026-02-19. (ID de transacción: TRX-1009).
+El departamento de Marketing registró un gasto de $2750.0 USD en la categoría 'Eventos y Webinars' el día 2026-02-25. (ID de transacción: TRX-1010).
+El departamento de Ventas registró un gasto de $1420.0 USD en la categoría 'Herramientas CRM' el día 2026-03-02. (ID de transacción: TRX-1011).
+El departamento de IT registró un gasto de $3600.0 USD en la categoría 'Ciberseguridad y SSL' el día 2026-03-07. (ID de transacción: TRX-1012).
+El departamento de Finanzas registró un gasto de $2900.0 USD en la categoría 'Servicios Legales' el día 2026-03-12. (ID de transacción: TRX-1013).
+El departamento de Operaciones registró un gasto de $1340.5 USD en la categoría 'Mantenimiento Equipos' el día 2026-03-17. (ID de transacción: TRX-1014).
+El departamento de RRHH registró un gasto de $2100.0 USD en la categoría 'Bienestar y Team Building' el día 2026-03-21. (ID de transacción: TRX-1015).
+El departamento de Marketing registró un gasto de $850.0 USD en la categoría 'Material Promocional' el día 2026-03-24. (ID de transacción: TRX-1016).
+El departamento de IT registró un gasto de $4200.0 USD en la categoría 'Servicios Cloud OCI' el día 2026-03-28. (ID de transacción: TRX-1017).
+El departamento de Ventas registró un gasto de $1750.25 USD en la categoría 'Comisiones y Viáticos' el día 2026-03-30. (ID de transacción: TRX-1018).

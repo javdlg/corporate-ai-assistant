@@ -1,0 +1,57 @@
+%PDF-1.4
+1 0 obj
+<< /Type /Catalog /Pages 2 0 R >>
+endobj
+2 0 obj
+<< /Type /Pages /Kids [3 0 R] /Count 1 >>
+endobj
+3 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Contents 4 0 R /Resources << /Font << /F1 5 0 R >> >> >>
+endobj
+4 0 obj
+<< /Length 1624 >>
+stream
+BT /F1 10 Tf 40 750 Td 14 TL
+(Guia de Estandares de Arquitectura de Datos y Gobierno - OmniCorp 2026) ' 
+() ' 
+(1. Vision General de la Arquitectura) ' 
+(La arquitectura de datos de OmniCorp esta disenada bajo el paradigma de Data Lakehouse en Oracle Cloud Infrastructure \(OCI\).) ' 
+(Esta estructura permite desacoplar el almacenamiento del procesamiento analitico, garantizando escalabilidad y gobernanza.) ' 
+() ' 
+(2. Stack Tecnologico Oficial) ' 
+(El equipo de ingenieria de datos estandariza el desarrollo bajo los siguientes componentes:) ' 
+(- Procesamiento y ETL: Python 3.11+, Pandas, PySpark y OCI Data Flow.) ' 
+(- Base de Datos y Almacenamiento: Oracle Autonomous Database \(ADB\), OCI Object Storage.) ' 
+(- IA Generativa y RAG: LangChain, LangGraph, ChromaDB y Gemini API.) ' 
+(- Control de Versiones: GitHub \(obligatorio para todo pase a produccion\).) ' 
+() ' 
+(3. Estructura de Repositorios y Codigo Base) ' 
+(Todo proyecto corporativo debe mantener la siguiente estructura modular:) ' 
+(- /src/ingestion: Modulos de carga y limpieza de datos multimodales.) ' 
+(- /src/agents: Agentes conversacionales y motor RAG.) ' 
+(- /src/graph: Orquestacion del flujo de trabajo con LangGraph.) ' 
+(- /data/raw: Datos de origen en formatos crudos \(PDF, Word, HTML, CSV\).) ' 
+(- /data/processed: Textos procesados y bases vectoriales.) ' 
+() ' 
+(4. Seguridad y Cifrado de Datos) ' 
+(Todos los datos en reposo utilizan encriptacion AES-256 en OCI Vault. Las comunicaciones en transito requieren TLS 1.3.) ' 
+(Queda prohibido incluir API Keys en el codigo; deben configurarse en variables de entorno \(.env\).) ' 
+ET
+endstream
+endobj
+5 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica >>
+endobj
+xref
+0 6
+0000000000 65535 f 
+0000000009 00000 n 
+0000000058 00000 n 
+0000000115 00000 n 
+0000000248 00000 n 
+0000001650 00000 n 
+trailer
+<< /Size 6 /Root 1 0 R >>
+startxref
+1723
+%%EOF

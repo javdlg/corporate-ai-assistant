@@ -1,0 +1,28 @@
+Manual de Operaciones y Procedimientos - OmniCorp
+🏢 Manual de Operaciones Estandarizadas (SOP) - OmniCorp 2026
+1. Gestión de Inventario y Cadena de Suministro
+El objetivo principal del departamento de operaciones es garantizar la consistencia y trazabilidad de los datos en toda la cadena de suministro corporativa.
+Procedimiento Obligatorio:
+Todo ingreso de mercadería, devolución o actualización de stock debe registrarse en el sistema ERP Tango antes del cierre operativo diario (18:00 hs). Las discrepancias superiores al 2% deben ser notificadas de inmediato a la Gerencia de Operaciones.
+2. Acuerdos de Nivel de Servicio (SLA) y Soporte Técnico
+Garantizamos un uptime operativo del 99.9% para todas las plataformas críticas del negocio. Los tiempos de respuesta a incidentes se clasifican según su severidad:
+Nivel de Severidad
+Descripción
+Tiempo de Respuesta (SLA)
+Responsable
+Crítico (P1)
+Caída total de producción o sistemas core
+< 15 minutos
+Team Lead IT / DevOps
+Alto (P2)
+Degradación severa del rendimiento
+< 1 hora
+Soporte L2 Nivel Técnico
+Medio (P3)
+Fallas menores o consultas de usuarios
+< 4 horas
+Helpdesk L1
+3. Protocolo de Respaldos y Recuperación ante Desastres (DRP)
+Los respaldos de base de datos se ejecutan automáticamente cada 6 horas en
+Oracle Cloud Infrastructure (OCI) Object Storage
+con encriptación activa. Las pruebas de restauración de copias de seguridad se llevan a cabo el primer domingo de cada mes.

@@ -1,0 +1,9 @@
+Manual de Políticas Corporativas y Recursos Humanos - OmniCorp 2026
+1. Modalidad de Trabajo y Flexibilidad Horaria
+En OmniCorp promovemos la conciliación entre la vida personal y laboral mediante un modelo híbrido flexible. Los colaboradores deben asistir de forma presencial a las oficinas centrales dos días a la semana (martes y jueves). Los tres días restantes se operan bajo la modalidad de teletrabajo. El horario de trabajo central (Core Hours) comprende de 10:00 a 16:00 hs.
+2. Vacaciones, Licencias Remuneradas y Day Off
+Todos los colaboradores con más de 6 meses de antigüedad disponen de 15 días hábiles de vacaciones anuales remuneradas. Adicionalmente, se otorga el Day Off de Cumpleaños (un día libre remunerado en el mes de nacimiento), 30 días corridos de licencia extendida por maternidad/paternidad y 3 días de bienestar al año sin justificativo médico.
+3. Presupuesto de Capacitación y Desarrollo Profesional
+Cada empleado cuenta con un fondo anual individual de $1,200 USD asignado para la realización de cursos de formación, obtención de certificaciones técnicas (Oracle Cloud, AWS, GCP) y plataformas de e-learning como Alura o Coursera.
+4. Reembolsos y Subsidios de Trabajo Remoto
+OmniCorp otorga un subsidio mensual fijo de $50 USD en concepto de conectividad e internet. Además, los gastos por viajes de negocios o eventos comerciales son reembolsables previa presentación de comprobantes en el portal de finanzas.
