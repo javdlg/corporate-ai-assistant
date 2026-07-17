@@ -31,9 +31,9 @@ def get_embedding_function():
             "Por favor, configura tu API Key en el archivo .env."
         )
 
-    # Inicializamos el modelo oficial de embeddings de Gemini (text-embedding-004)
+    # Inicializamos el modelo oficial de embeddings de Gemini (gemini-embedding-2)
     embeddings = GoogleGenerativeAIEmbeddings(
-        model="models/text-embedding-004", google_api_key=api_key
+        model="models/gemini-embedding-2", google_api_key=api_key
     )
     return embeddings
 
