@@ -38,9 +38,10 @@ La aplicación se encuentra desplegada y completamente operativa en Streamlit Co
 
 🔗 **[Acceder al Asistente AI Corporativo](https://corporate-ai-assistant.streamlit.app/)**
 
-*(Nota: Una vez generado el GIF de demostración con ScreenToGif, se puede colocar en esta sección reemplazando el placeholder inferior).*
+### 📺 Demostración de Funcionamiento
+A continuación se muestra una animación del asistente AI respondiendo consultas y mostrando el desglose de referencias en tiempo real:
 
-![Demo Placeholder](https://via.placeholder.com/800x400.png?text=Agente+Ejecutándose+en+Streamlit+Cloud)
+![Asistente AI de OmniCorp en Acción](gif/omnicorp-gif-1.gif)
 
 ## ⚙️ Instrucciones de Uso Local
 1. Clonar este repositorio.
