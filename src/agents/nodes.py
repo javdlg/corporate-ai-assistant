@@ -32,6 +32,42 @@ def retrieve_documents(state: AgentState) -> dict:
     return {"documents": docs}
 
 
+def extract_text_from_content(content) -> str:
+    """
+    Extrae el texto limpio de la respuesta de Gemini, manejando tanto
+    strings planos como estructuras de lista/JSON que contienen 'extras' o 'signatures'
+    en los modelos modernos de la serie Gemini.
+    """
+    if not content:
+        return ""
+        
+    # Caso 1: Es una lista de dicts (estructura compleja de LangChain)
+    if isinstance(content, list):
+        text_parts = []
+        for part in content:
+            if isinstance(part, dict):
+                if "text" in part:
+                    text_parts.append(part["text"])
+            elif isinstance(part, str):
+                text_parts.append(part)
+        return "\n".join(text_parts)
+        
+    # Caso 2: Es un string, pero estructurado como JSON (ej. de wrappers antiguos)
+    if isinstance(content, str):
+        content_stripped = content.strip()
+        if content_stripped.startswith("[") and content_stripped.endswith("]"):
+            try:
+                import json
+                parsed = json.loads(content_stripped)
+                if isinstance(parsed, list):
+                    return extract_text_from_content(parsed)
+            except Exception:
+                pass
+        return content
+
+    return str(content)
+
+
 def generate_answer(state: AgentState) -> dict:
     """
     Nodo de LangGraph: Genera la respuesta final al usuario utilizando
@@ -51,9 +87,9 @@ def generate_answer(state: AgentState) -> dict:
             "❌ No se encontró la API Key de Gemini en las variables de entorno (.env)."
         )
 
-    # Inicializamos el modelo oficial de chat de Gemini
+    # Inicializamos el modelo oficial de chat de Gemini (versión 3.5)
     llm = ChatGoogleGenerativeAI(
-        model="gemini-2.5-flash",
+        model="gemini-3.5-flash",
         google_api_key=api_key,
         temperature=0.2,  # Temperatura baja para garantizar respuestas precisas basadas en el contexto
     )
@@ -86,9 +122,10 @@ def generate_answer(state: AgentState) -> dict:
 
     try:
         response = llm.invoke(messages)
-        return {"generation": response.content}
+        clean_text = extract_text_from_content(response.content)
+        return {"generation": clean_text}
     except Exception as e:
         print(f"❌ Error al invocar a Gemini API: {e}")
         return {
-            "generation": "Lo siento, ocurrió un error interno al intentar procesar tu consulta con el modelo de IA."
+            "generation": f"Lo siento, ocurrió un error interno al intentar procesar tu consulta con el modelo de IA. Detalle técnico: {e}"
         }
