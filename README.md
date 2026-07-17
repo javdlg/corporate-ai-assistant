@@ -3,15 +3,15 @@
 ## 📝 Descripción del Proyecto
 Agente de Inteligencia Artificial corporativo desarrollado para centralizar la base de conocimiento de una organización. Este sistema permite a los colaboradores consultar políticas de RRHH, reportes financieros, manuales operativos y estructuras de datos internos interactuando en lenguaje natural.
 
-El proyecto es la solución oficial al desafío **"ONE AI for TECH" de Oracle y Alura Latam**, destacando la capacidad de procesar datos multimodales y orquestar flujos de trabajo inteligentes mediante grafos.
+Este proyecto es la solución al desafío **"ONE AI for TECH" de Oracle y Alura Latam**, destacando la capacidad de procesar datos multimodales y orquestar flujos de trabajo inteligentes mediante grafos.
 
-## 🎯 Características Principales (Requisitos del Desafío)
+## 🎯 Características Principales
 - **Ingesta Multimodal:** Capacidad de lectura y procesamiento de múltiples formatos de archivo corporativos, incluyendo: `PDF`, `Word`, `Excel`, `Markdown`, `CSV`, `JSON` y `HTML`.
 - **RAG Avanzado:** Arquitectura de *Retrieval-Augmented Generation* para garantizar respuestas precisas basadas estrictamente en la documentación interna.
 - **Orquestación Multi-Agente:** Implementación de enrutadores inteligentes utilizando **LangGraph** para dirigir las consultas al procesador de documentos adecuado.
 - **Despliegue en la Nube:** Alojado en **Streamlit Community Cloud**.
 
-## 🛠️ Arquitectura y Tecnologías (Stack)
+## 🛠️ Arquitectura y Tecnologías
 * **LLM Core:** Gemini API (Google).
 * **Framework de IA:** LangChain & LangGraph.
 * **Procesamiento de Datos:** Pandas, PyPDF, Python-docx, BeautifulSoup.
@@ -33,7 +33,7 @@ El proyecto es la solución oficial al desafío **"ONE AI for TECH" de Oracle y 
 └── README.md
 ```
 
-## 🚀 Despliegue en la Nube (Demostración)
+## 🚀 Despliegue en la Nube
 La aplicación se encuentra desplegada y completamente operativa en Streamlit Community Cloud. Puedes acceder a ella e interactuar con el agente a través del siguiente enlace público:
 
 🔗 **[Acceder al Asistente AI Corporativo](https://corporate-ai-assistant.streamlit.app/)**
