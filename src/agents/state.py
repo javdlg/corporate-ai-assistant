@@ -17,3 +17,4 @@ class AgentState(TypedDict):
     documents: List[Document]
     generation: str
     chat_history: List[BaseMessage]
+    is_on_topic: bool
