@@ -34,7 +34,11 @@ El proyecto es la solución oficial al desafío **"ONE AI for TECH" de Oracle y 
 ```
 
 ## 🚀 Despliegue en la Nube (Demostración)
-*(Nota: Aquí se insertará la imagen o GIF del agente corriendo en Streamlit Community Cloud una vez completada la fase final).*
+La aplicación se encuentra desplegada y completamente operativa en Streamlit Community Cloud. Puedes acceder a ella e interactuar con el agente a través del siguiente enlace público:
+
+🔗 **[Acceder al Asistente AI Corporativo](https://corporate-ai-assistant.streamlit.app/)**
+
+*(Nota: Una vez generado el GIF de demostración con ScreenToGif, se puede colocar en esta sección reemplazando el placeholder inferior).*
 
 ![Demo Placeholder](https://via.placeholder.com/800x400.png?text=Agente+Ejecutándose+en+Streamlit+Cloud)
 
