@@ -1,20 +1,13 @@
 import os
-import sys
 from dotenv import load_dotenv
 
-# Configuración de rutas para importar vector_store de manera correcta
-SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
-BASE_DIR = os.path.dirname(SCRIPT_DIR) # Sube a src
-PROJECT_DIR = os.path.dirname(BASE_DIR) # Sube a la raíz del proyecto
-
-if SCRIPT_DIR not in sys.path:
-    sys.path.append(SCRIPT_DIR)
-
 # Cargar variables de entorno (.env)
+SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
+PROJECT_DIR = os.path.dirname(os.path.dirname(SCRIPT_DIR))
 ENV_PATH = os.path.join(PROJECT_DIR, ".env")
 load_dotenv(ENV_PATH)
 
-from vector_store import get_vector_store  # noqa: E402
+from src.agents.vector_store import get_vector_store
 
 
 def retrieve_relevant_documents(query: str, k: int = 4):
