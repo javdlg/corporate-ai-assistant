@@ -9,7 +9,8 @@ Este proyecto es la solución al desafío **"ONE AI for TECH" de Oracle y Alura 
 - **Ingesta Multimodal:** Capacidad de lectura y procesamiento de múltiples formatos de archivo corporativos, incluyendo: `PDF`, `Word`, `Excel`, `Markdown`, `CSV`, `JSON` y `HTML`.
 - **RAG Avanzado:** Arquitectura de *Retrieval-Augmented Generation* para garantizar respuestas precisas basadas estrictamente en la documentación interna.
 - **Orquestación Multi-Agente:** Implementación de enrutadores inteligentes utilizando **LangGraph** para dirigir las consultas al procesador de documentos adecuado.
-- **Despliegue en la Nube:** Alojado en **Streamlit Community Cloud**.
+- **Guardrails de Seguridad (Control de Costos):** Filtro inicial en LangGraph que evalúa y bloquea de forma inmediata consultas ajenas a la organización (*off-topic*) o intentos de jailbreak, previniendo el consumo innecesario de la API de Gemini en la aplicación pública.
+- **Despliegue en la Nube:** Alojado en **Streamlit Community Cloud** para alta disponibilidad.
 
 ## 🛠️ Arquitectura y Tecnologías
 * **LLM Core:** Gemini API (Google).
