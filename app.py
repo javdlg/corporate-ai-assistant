@@ -41,6 +41,7 @@ st.markdown(
             border-radius: 4px;
             margin-bottom: 8px;
             font-size: 0.9rem;
+            color: #1F2937; /* Color oscuro para asegurar la legibilidad del texto */
         }
         /* Ajuste visual para las fuentes consultadas */
         .source-box {
